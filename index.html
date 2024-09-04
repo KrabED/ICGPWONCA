@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var message = `Dear Mr Storonsky and colleagues,
+
+I hope this email finds you well. I am writing to express my deepest concern and disappointment over steps Revolut has been taking to open a branch in Israel, including listing of job positions and the aquisition of an identification code from the Bank of Israel. As a customer who believes strongly in ethical business practices, I am troubled by this move. By opening a branch in Israel at a time when customers worldwide are urging companies to boycott Israel due to the atrocities they are committing against the Palestinian people, you are signalling to the world that you support ethnic cleansing.
+
+Did you consider the ethical implications of investing in a country which is now on notice by the International Criminal Court for carrying out a possible genocide and the International Court of Justice regarding the legal consequences of its prolonged occupation and settlement activities in the Palestinian territories and the legal consequences of its prolonged military campaign in Gaza, which resulted in the bombardment of refugee camps, schools and hospitals and the starvation of innocent people? The recent ICJ ruling on the 19th of July 2024 declares Israel as an apartheid state and that alone should be enough to cease any current and future business with such a rogue state.
+
+In response to this, I, as a citizen of Ireland, a nation so vehemently opposed to Israels decades long colonisation and oppression of Palestinians, will be participating in a boycott of Revolut on September 9th and 10th 2024. During these days, I will refrain from using any of Revolut’s services and I will encourage others in my community to do the same. This boycott is intended to send a clear message to Revolut that its customers expect the company to align its operations with values that promote peace, human rights and justice.
+
+I urge Revolut to reconsider its decision to open a branch in Israel and to take a stand that reflects a commitment to ethical practices and global responsibility. Your customers in Ireland care deeply about the plight of the Gazan people and we hope that Revolut will take this feedback seriously. If we do not receive a response will we plan for futher days of boycott until an ultimate decision to blacklist Revolut as a societally acceptable banking service, as a country with such widespread use of your services we hope that it will not come to this and you will stand on the right side of history.
+
+Thank you for taking the time to read this email.
+
+I look forward to hearing from you.
+
+Yours sincerely,
+`;
+
+        function normalizeString(str) {
+        // Define a mapping of special characters to their non-accented equivalents
+        const charMap = {
+            'à': 'a',
+            'á': 'a',
+            'ä': 'a',
+            'é': 'e',
+            'è': 'e',
+            'ê': 'e',
+            'ë': 'e',
+            'í': 'i',
+            'î': 'i',
+            'ï': 'i',
+            'ì': 'i',
+            'ó': 'o',
+            'ô': 'o',
+            'ö': 'o',
+            'ú': 'u',
+            'û': 'u',
+            'ü': 'u',
+            'ū': 'u',
+            'ç': 'c',
+            'À': 'A',
+            'Á': 'A',
+            'Ä': 'A',
+            'É': 'E',
+            'È': 'E',
+            'Ê': 'E',
+            'Ë': 'E',
+            'Í': 'I',
+            'Ì': 'I',
+            'Î': 'I',
+            'Ï': 'I',
+            'Ó': 'O',
+            'Ô': 'O',
+            'Ö': 'O',
+            'Ú': 'U',
+            'Û': 'U',
+            'Ü': 'U',
+            'Ū': 'U',
+            'Ç': 'C',
+            // Add more mappings as needed
+        };
+
+        // Use a regular expression to replace special characters
+        return str.replace(/[àáäéèêëíîìïóôöúûüūçÀÁÄÉÈÊËÍÌÎÏÓÔÖÚÛÜŪÇ]/g, match => charMap[match] || match);
+        }
+
+        function sendEmail() {
+            // Get the user's signature from the textarea
+            var signature = document.getElementById("signature").value;
+
+            signature = signature.replace(/ /g, " "); // Replace spaces with space characters
+
+            // Normalize the signature by replacing special characters with their non-accented equivalents
+            var normalizedSignature = normalizeString(signature);
+
+            // Encode the signature for use in the mailto link
+            var encodedSignature = encodeURIComponent(normalizedSignature).replace(/%20/g, " ");
+
+            // Create the mailto link
+            var mailtoLink = `mailto:chris.andrews@oireachtas.ie,ivana.bacik@oireachtas.ie,mick.barry@oireachtas.ie,cathal.berry@oireachtas.ie,John.brady@oireachtas.ie,colm.brophy@oireachtas.ie,james.browne@oireachtas.ie,martin.browne@oireachtas.ie,richard.bruton@oireachtas.ie,pat.buckley@oireachtas.ie,colm.burke@oireachtas.ie,peter.burke@oireachtas.ie,mary.butler@oireachtas.ie,thomas.byrne@oireachtas.ie,jackie.cahill@oireachtas.ie,holly.cairns@oireachtas.ie,dara.calleary@oireachtas.ie,sean.canney@oireachtas.ie,ciaran.cannon@oireachtas.ie,joe.carey@oireachtas.ie,matt.carthy@oireachtas.ie,jack.chambers@oireachtas.ie,sorca.clarke@oireachtas.ie,joan.collins@oireachtas.ie,michael.collins@oireachtas.ie,niall.collins@oireachtas.ie,catherine.connolly@oireachtas.ie,rose.conwaywalsh@oireachtas.ie,patrick.costello@oireachtas.ie,simon.coveney@oireachtas.ie,barry.cowen@oireachtas.ie,michael.creed@oireachtas.ie,reada.cronin@oireachtas.ie,cathal.crowe@oireachtas.ie,sean.crowe@oireachtas.ie,david.cullinane@oireachtas.ie,pa.daly@oireachtas.ie,cormac.devlin@oireachtas.ie,alan.dillon@oireachtas.ie,pearse.doherty@oireachtas.ie,paul.donnelly@oireachtas.ie,stephen.donnelly@oireachtas.ie,paschal.donohoe@oireachtas.ie,francisnoel.duffy@oireachtas.ie,bernard.durkan@oireachtas.ie,dessie.ellis@oireachtas.ie,damien.english@oireachtas.ie,alan.farrell@oireachtas.ie,mairead.farrell@oireachtas.ie,frank.feighan@oireachtas.ie,michael.fitzmaurice@oireachtas.ie,peterm.fitzpatrick@oireachtas.ie,joe.flaherty@oireachtas.ie,charles.flanagan@oireachtas.ie,sean.fleming@oireachtas.ie,norma.foley@oireachtas.ie,kathleen.funchion@oireachtas.ie,gary.gannon@oireachtas.ie,thomas.gould@oireachtas.ie,noel.grealish@oireachtas.ie,brendan.griffin@oireachtas.ie,johnny.guirke@oireachtas.ie,marian.harkin@oireachtas.ie,simon.harris@oireachtas.ie,sean.haughey@oireachtas.ie,danny.healy-rae@oireachtas.ie,michael.healy-rae@oireachtas.ie,martin.heydon@oireachtas.ie,emer.higgins@oireachtas.ie,neasa.hourigan@oireachtas.ie,brendan.howlin@oireachtas.ie,heather.humphreys@oireachtas.ie,paul.kehoe@oireachtas.ie,alan.kelly@oireachtas.ie,gino.kenny@oireachtas.ie,martin.kenny@oireachtas.ie,claire.kerrane@oireachtas.ie,john.lahart@oireachtas.ie,james.lawless@oireachtas.ie,brian.leddin@oireachtas.ie,padraig.maclochlainn@oireachtas.ie,michael.lowry@oireachtas.ie,jennifer.carrollmacneill@oireachtas.ie,marc.macsharry@oireachtas.ie,josepha.madigan@oireachtas.ie,catherine.martin@oireachtas.ie,micheal.martin@oireachtas.ie,steven.matthews@oireachtas.ie,paul.mcauliffe@oireachtas.ie,charlie.mcconalogue@oireachtas.ie,marylou.mcdonald@oireachtas.ie,helen.mcentee@oireachtas.ie,mattie.mcgrath@oireachtas.ie,michael.mcgrath@oireachtas.ie,john.mcguinness@oireachtas.ie,joe.mchugh@oireachtas.ie,michael.mcnamara@oireachtas.ie,denise.mitchell@oireachtas.ie,aindrias.moynihan@oireachtas.ie,michael.moynihan@oireachtas.ie,imelda.munster@oireachtas.ie,catherine.murphy@oireachtas.ie,paul.murphy@oireachtas.ie,verona.murphy@oireachtas.ie,johnny.mythen@oireachtas.ie,Gerald.Nash@oireachtas.ie,denis.naughten@oireachtas.ie,hildegarde.naughton@oireachtas.ie,carol.nolan@oireachtas.ie,malcolm.noonan@oireachtas.ie,eoin.obroin@oireachtas.ie,marc.ocathasaigh@oireachtas.ie,eamon.ocuiv@oireachtas.ie,sean.ofearghail@oireachtas.ie,donnchadh.olaoghaire@oireachtas.ie,ruairi.omurchu@oireachtas.ie,Aodhan.ORiordain@oireachtas.ie,aengus.osnodaigh@oireachtas.ie,darragh.obrien@oireachtas.ie,joe.obrien@oireachtas.ie,cian.ocallaghan@oireachtas.ie,jim.ocallaghan@oireachtas.ie,james.oconnor@oireachtas.ie,jennifer.murnaneoconnor@oireachtas.ie,willie.odea@oireachtas.ie,kieran.odonnell@oireachtas.ie,richard.odonoghue@oireachtas.ie,patrick.odonovan@oireachtas.ie,fergus.odowd@oireachtas.ie,roderic.ogorman@oireachtas.ie,louise.oreilly@oireachtas.ie,darren.orourke@oireachtas.ie,christopher.osullivan@oireachtas.ie,padraig.osullivan@oireachtas.ie,johnpaul.phelan@oireachtas.ie,thomas.pringle@oireachtas.ie,maurice.quinlivan@oireachtas.ie,anne.rabbitte@oireachtas.ie,neale.richmond@oireachtas.ie,michael.ring@oireachtas.ie,eamon.ryan@oireachtas.ie,patricia.ryan@oireachtas.ie,matt.shanahan@oireachtas.ie,sean.sherlock@oireachtas.ie,roisin.shortall@oireachtas.ie,brendan.smith@oireachtas.ie,brid.smith@oireachtas.ie,duncan.smith@oireachtas.ie,niamh.smyth@oireachtas.ie,ossian.smyth@oireachtas.ie,brian.stanley@oireachtas.ie, david.stanton@oireachtas.ie,peadar.toibin@oireachtas.ie,robert.troy@oireachtas.ie,pauline.tully@oireachtas.ie,leo.varadkar@oireachtas.ie,mark.ward@oireachtas.ie,jennifer.whitmore@oireachtas.ie,violet-anne.wynne@oireachtas.ie?subject=Boycott of Revolut on 9th and 10th September 2024&body=${encodeURIComponent(message + encodedSignature)}`;
+            console.log(encodedSignature)
+
+            // Open the email client with the pre-filled email
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <div style="clear:both;">
+            <p class="normal0">&nbsp;<span style="font-size: 30px;font-family:Calibri;"><b>OPENING IN ISRAEL MEANS CLOSING IN IRELAND</b></span></p>
+        </div>
+    <div style="clear:both;font-size: 15px;">
+    <p>Please sign your name and we will generate an email on your behalf. We will not be complicit in supporting genocide.
+    <br><br>
+    </p>
+    <div><textarea id="signature" name="signature" placeholder="Type your signature here" style="width: 100%; height: 100px;"></textarea>
+    </div>
+    <input type="button" value="Generate Email" onclick="sendEmail()" style="font-size: 40px; width: 50%;"></div>
+    <div>
+        <!--<p class="normal0" style="line-height:100%; font-size:12pt;"><span style="font-family:Calibri;">&nbsp;</span></p>-->
+        </div>
+</body>
+</html>
