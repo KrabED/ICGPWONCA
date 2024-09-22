@@ -86,7 +86,7 @@ Regards,
             var encodedSignature = encodeURIComponent(normalizedSignature).replace(/%20/g, " ");
 
             // Create the mailto link
-            var mailtoLink = `mailto:info@icgp.ie;secretariateurope@wonca.net?subject=Regarding WONCA Conference 2024&body=${encodeURIComponent(message + encodedSignature)}`;
+            var mailtoLink = `mailto:info@icgp.ie,secretariateurope@wonca.net?subject=Regarding WONCA Conference 2024&body=${encodeURIComponent(message + encodedSignature)}`;
             console.log(encodedSignature)
 
             // Open the email client with the pre-filled email
